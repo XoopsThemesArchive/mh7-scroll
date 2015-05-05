@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<{assign var=themeName value=$xoTheme->folderName}>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<{if $xoops_dirname == "liaise" || $xoops_dirname == "contact"}><link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_imageurl}>altstyle.css" />
+<{else}>
+<{if $xoops_dirname == "newbb" }><link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_imageurl}>forum.css" />
+<{else}>
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<{/if}><{/if}>
+
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+<!-- Button Rollover -->
+<script type="text/javascript">
+<!--
+
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+
+function changeImages() {
+	if (document.images && (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		home_over = newImage("images/home-over.gif");
+		support_over = newImage("images/support-over.gif");
+		download_over = newImage("images/download-over.gif");
+		contact_over = newImage("images/contact-over.gif");
+		preloadFlag = true;
+	}
+}
+
+// -->
+</script>
+</head>
+<body class="themebg" onload="preloadImages();">
+<div id="mainframe">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="<{$xoops_imageurl}>images/topleft.gif" alt="" /></td>
+	<td>
+	<!-- Top Rollover buttons -->
+	<table id="topbuttons" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<a href="<{$xoops_url}>/index.php"
+				onmouseover="changeImages('home', '<{$xoops_imageurl}>images/home-over.gif'); return true;"
+				onmouseout="changeImages('home', '<{$xoops_imageurl}>images/home.gif'); return true;">
+				<img name="home" src="<{$xoops_imageurl}>images/home.gif" width="94" height="60" border="0" alt=""></a></td>
+		<td>
+			<a href="<{$xoops_url}>/modules/liaise"
+				onmouseover="changeImages('support', '<{$xoops_imageurl}>images/support-over.gif'); return true;"
+				onmouseout="changeImages('support', '<{$xoops_imageurl}>images/support.gif'); return true;">
+				<img name="support" src="<{$xoops_imageurl}>images/support.gif" width="107" height="60" border="0" alt=""></a></td>
+		<td>
+			<a href="<{$xoops_url}>/modules/wfdownloads"
+				onmouseover="changeImages('download', '<{$xoops_imageurl}>images/download-over.gif'); return true;"
+				onmouseout="changeImages('download', '<{$xoops_imageurl}>images/download.gif'); return true;">
+				<img name="download" src="<{$xoops_imageurl}>images/download.gif" width="113" height="60" border="0" alt=""></a></td>
+		<td>
+			<a href="<{$xoops_url}>/modules/contact"
+				onmouseover="changeImages('contact', '<{$xoops_imageurl}>images/contact-over.gif'); return true;"
+				onmouseout="changeImages('contact', '<{$xoops_imageurl}>images/contact.gif'); return true;">
+				<img name="contact" src="<{$xoops_imageurl}>images/contact.gif" width="97" height="60" border="0" alt=""></a></td>
+	</tr>
+</table>
+<!-- End top buttons -->
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+	<{if $xoops_pagetitle == "Home Page" }><div><a href="http://emuzement.net"><img src="<{$xoops_imageurl}>images/banner.jpg" title="<{$xoops_sitename}> - <{$xoops_pagetitle}>" /></a></div>
+	<{else}>
+	<script language="JavaScript">
+	  		<!--
+
+	  		/*
+	  		Random Content Script- By JavaScript Kit(http://www.javascriptkit.com)
+	  		Over 200+ free JavaScripts here!
+	  		*/
+
+	  		function random_content(){
+	  		var mycontent=new Array()
+	  		//specify random content below.
+	  		mycontent[1]='<div><a href="http://emuzement.net"><img src="<{$xoops_imageurl}>images/banner.jpg" title="<{$xoops_sitename}> - <{$xoops_pagetitle}>" /></a></div>'
+	  		mycontent[2]='<div><a href="http://emuzement.net"><img src="<{$xoops_imageurl}>images/header2.jpg" title="<{$xoops_sitename}> - <{$xoops_pagetitle}>" /></a></div>'
+	  		mycontent[3]='<div><a href="http://emuzement.net"><img src="<{$xoops_imageurl}>images/header3.jpg" title="<{$xoops_sitename}> - <{$xoops_pagetitle}>" /></a></div>'
+	  		mycontent[4]='<div><a href="http://emuzement.net"><img src="<{$xoops_imageurl}>images/header4.jpg" title="<{$xoops_sitename}> - <{$xoops_pagetitle}>" /></a></div>'
+	  		mycontent[5]='<div><a href="http://emuzement.net/affiliate"><img src="<{$xoops_imageurl}>images/header5.jpg" title="<{$xoops_sitename}> - <{$xoops_pagetitle}>" /></a></div>'
+			mycontent[6]='<div><a href="http://emuzement.net/affiliate"><img src="<{$xoops_imageurl}>images/header6.jpg" title="<{$xoops_sitename}> - <{$xoops_pagetitle}>" /></a></div>'
+
+	  		var ry=Math.floor(Math.random()*mycontent.length)
+	  		if (ry==0)
+	  		ry=1
+	  		document.write(mycontent[ry])
+	  		}
+	  		random_content()
+	  		//-->
+      </script><{/if}>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+	<table id="buttons" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="25%">Hosting Packages</td>
+    <td><img src="<{$xoops_imageurl}>images/buttonsep.gif" /></td>
+    <td width="25%">Design Services</td>
+    <td><img src="<{$xoops_imageurl}>images/buttonsep.gif" /></td>
+    <td width="25%"><a href="<{$xoops_url}>/modules/newbb">Dicussion Forums</a></td>
+    <td><img src="<{$xoops_imageurl}>images/buttonsep.gif" /></td>
+    <td width="25%">Galleries</td>
+  </tr>
+</table>
+	</td>
+  </tr>
+  <tr>
+  <td colspan="2">
+  <table id="headerbar" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="background: #FFD200; width: 171px;">&nbsp;</td>
+    <td class="pagetitle"><{$xoops_pagetitle}></td>
+    <td style="background: #FFA800; width: 411px;">&nbsp;</td>
+  </tr>
+</table>
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+	<div style="overflow: auto; width: 800px; height: 410px;">
+	<table style="width: 780px" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="leftcolumn">
+	<div style="text-align: center;"><{$xoops_banner}></div>
+		<div id="leftcolumn">
+			<{foreach item=block from=$xoops_lblocks}>
+              <{include file="$themeName/left.html"}>
+            <{/foreach}>
+		</div>
+	</td>
+	<{if $xoops_showrblock == 1}>
+    	<td id="rightcolumn">
+		<div id="rightcolumn">
+			<{foreach item=block from=$xoops_rblocks}>
+              <{include file="$themeName/right.html"}>
+            <{/foreach}>
+		</div>
+		</td>
+	<{/if}>
+    <td id="centercolumn">
+	 <{if $xoops_showcblock == 1}>
+        <table cellspacing="0">
+		<tr>
+			<td id="centerCcolumn" colspan="2">
+			
+			<{foreach item=block from=$xoops_ccblocks}>
+				<{include file="$themeName/center.html"}>
+			<{/foreach}>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>			
+			<{foreach item=block from=$xoops_clblocks}>
+				<{include file="$themeName/centerleft.html"}>
+			<{/foreach}>		
+			</td>
+			<td>				
+			<{foreach item=block from=$xoops_crblocks}>
+				<{include file="$themeName/centerright.html"}>
+			<{/foreach}>	
+			</td>
+		</tr>
+        </table>
+        <{/if}>
+		<div id="content">
+          <{$xoops_contents}>
+        </div>
+		
+		 <{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright or $xoBlocks.page_bottomcenter}>
+        <table cellspacing="0">
+        <{if $xoBlocks.page_bottomcenter}>
+		<tr><td id="bottomCcolumn" colspan="2">
+			<{foreach from=$xoBlocks.page_bottomcenter item=block}>
+				<{include file="$themeName/center.html"}>
+			<{/foreach}>
+			</td>
+		</tr>
+		<{/if}>
+		<{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright}>
+		<tr>
+			<td id="bottomLcolumn">
+				<{foreach from=$xoBlocks.page_bottomleft item=block}>
+					<{include file="$themeName/centerleft.html"}>
+				<{/foreach}>
+			</td>
+			<td id="bottomRcolumn">
+				<{foreach from=$xoBlocks.page_bottomright item=block}>
+					<{include file="$themeName/centerright.html"}>
+				<{/foreach}>
+			</td>
+		</tr>
+        <{/if}>
+        </table>
+        <{/if}>
+		
+	</td>
+  </tr>
+</table>
+	</div>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+<div id="thefoot"><{$xoops_footer}> :: 
+	<!-- USER MENU -->
+<{if $xoops_isuser}>
+<!-- This is for the member inbox -->
+<{php}>
+GLOBAL $xoopsUser;
+$pm_handler =& xoops_gethandler('privmessage');
+$uid = $xoopsUser->getVar('uid');
+$criteria = new CriteriaCompo(new Criteria('read_msg', 0));
+$criteria->add(new Criteria('to_userid', $uid));
+$msgcount = $pm_handler->getCount($criteria);
+$GLOBALS['xoopsTpl']->assign('new_messages', $msgcount);
+<{/php}>      	
+            	
+			<b>User Menu:</b>
+			<{if $xoops_isadmin}>
+				<a class="greeting" href="<{$xoops_url}>/modules/system/admin.php?fct=blocksadmin"><b>Admin</b></a> | 
+				<a class="greeting" href="<{$xoops_url}>/user.php">View Account</a> | 
+			<{else}>
+				<a class="greeting" href="<{$xoops_url}>/user.php">View Account</a> | 
+			<{/if}>
+				<a class="greeting" href="<{$xoops_url}>/edituser.php">Edit Account</a> | 
+				<a class="greeting" href="<{$xoops_url}>/notifications.php">Notifications</a> | 
+			<{if $new_messages > 0}>
+				<a class="newmsg" href="<{$xoops_url}>/viewpmsg.php">New Messages (<span style="color:#ff0000; font-weight: bold;"><{$new_messages}></span>)</a> | 
+			<{else}>
+				<a class="greeting" href="<{$xoops_url}>/viewpmsg.php">Inbox</a> | 
+			<{/if}>
+				<a class="greeting" href="<{$xoops_url}>/user.php?op=logout">Logout</a>
+			<{else}>
+				<a href="<{$xoops_url}>/user.php">Login or Register here</a>
+			<{/if}>
+<!-- END USER MENU -->
+</div>
+	</td>
+  </tr>
+</table>
+</div>
+<div style="text-align: center; margin-top: 20px;">Design by <a href="http://masshost.net" target="_blank">Masshost.net</a></div>
+</body>
+</html>
